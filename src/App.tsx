@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import {io, Socket} from "socket.io-client"
 
 function App() {
-  const SOCKET_URL = import.meta.env.SOCKET_URL!
+  const SOCKET_URL = import.meta.env.VITE_SOCKET_URL
   const [socket, setSocket] = useState<Socket | null>(null)
   const [messages, setMessages] = useState<string[]>([])
   const message = useRef<HTMLInputElement>(null)
